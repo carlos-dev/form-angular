@@ -1,0 +1,16 @@
+.form {
+    width: 95%;
+    margin: 30px auto;
+}
+
+mat-form-field {
+    display: block;
+}
+
+.mat-input-element {
+    color: #fff;
+}
+
+.mat-button.active .mat-button-focus-overlay {
+    opacity: .04;
+}

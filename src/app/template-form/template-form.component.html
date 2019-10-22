@@ -1,0 +1,23 @@
+<form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <mat-form-field>
+        <input matInput placeholder="nome" name="nome" [value]="nome" [(ngModel)]="user.nome" required #nome="ngModel">
+    </mat-form-field>
+    <div *ngIf="!nome.valid && nome.touched">
+        nome é obrigatório
+    </div>
+
+    <mat-form-field>
+        <input matInput placeholder="email" name="email" required [(ngModel)]="user.email" #email="ngModel">
+    </mat-form-field>
+    <div *ngIf="!email.valid && email.touched">
+        email é obrigatório
+    </div>
+    
+    <!-- <mat-form-field>
+        <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+        </mat-select>
+    </mat-form-field> -->
+
+    <button mat-raised-button color="accent">Click me!</button>
+</form>
