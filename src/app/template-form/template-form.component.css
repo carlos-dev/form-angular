@@ -11,6 +11,18 @@ mat-form-field {
     color: #fff;
 }
 
-.mat-button.active .mat-button-focus-overlay {
-    opacity: .04;
+.mat-button .mat-button-focus-overlay {
+    opacity: .04 !important;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #fff;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
